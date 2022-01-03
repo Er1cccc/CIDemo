@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CIDemo</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<h2 class="text-center">CIDemo Project
+    <span class="badge badge-success">For CodeInspector</span>
+</h2>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">漏洞名</th>
+        <th scope="col">级别</th>
+        <th scope="col">URL</th>
+        <th scope="col">参数</th>
+        <th scope="col">详情</th>
+        <!--        <span class="badge badge-danger">高危</span>-->
+        <!--        <span class="badge badge-warning">中危</span>-->
+        <!--        <span class="badge badge-success">低危</span>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">01</th>
+        <td>SSRF</td>
+        <td><span class="badge badge-warning">中危</span></td>
+        <td>/ssrf/test1</td>
+        <td>url</td>
+        <td>原生HttpURLConnection请求</td>
+    </tr>
+    <tr>
+        <th scope="row">02</th>
+        <td>SSRF</td>
+        <td><span class="badge badge-warning">中危</span></td>
+        <td>/ssrf/test2</td>
+        <td>url</td>
+        <td>使用Apache HTTPClient请求</td>
+    </tr>
+    <tr>
+        <th scope="row">03</th>
+        <td>SSRF</td>
+        <td><span class="badge badge-warning">中危</span></td>
+        <td>/ssrf/test3</td>
+        <td>host&port</td>
+        <td>根据IP和端口参数做原生Socket请求</td>
+    </tr>
+    <tr>
+        <th scope="row">04</th>
+        <td>SSRF</td>
+        <td><span class="badge badge-warning">中危</span></td>
+        <td>/ssrf/test4</td>
+        <td>url</td>
+        <td>使用OkHttp3请求</td>
+    </tr>
+    <tr>
+        <th scope="row">05</th>
+        <td>反射XSS</td>
+        <td><span class="badge badge-success">低危</span></td>
+        <td>/xss/reflection</td>
+        <td>data</td>
+        <td>简单的反射XSS</td>
+    </tr>
+    <tr>
+        <th scope="row">06</th>
+        <td>存储XSS</td>
+        <td><span class="badge badge-danger">高危</span></td>
+        <td>/xss/insert</td>
+        <td>data</td>
+        <td>存储XSS插入数据</td>
+    </tr>
+    <tr>
+        <th scope="row">07</th>
+        <td>存储XSS</td>
+        <td><span class="badge badge-danger">高危</span></td>
+        <td>/xss/get</td>
+        <td>id</td>
+        <td>查询触发存储XSS</td>
+    </tr>
+    <tr>
+        <th scope="row">08</th>
+        <td>SQL注入</td>
+        <td><span class="badge badge-danger">高危</span></td>
+        <td>/sqli/add</td>
+        <td>name&age</td>
+        <td>新增数据</td>
+    </tr>
+    <tr>
+        <th scope="row">09</th>
+        <td>SQL注入</td>
+        <td><span class="badge badge-danger">高危</span></td>
+        <td>/sqli/select</td>
+        <td>name</td>
+        <td>SQL注入触发点</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
